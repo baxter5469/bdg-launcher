@@ -6,7 +6,6 @@ from tkinter import filedialog
 import os
 self = ""
 top = tk.Tk()
-
 def runFormat(self):
     file = filedialog.askopenfile(initialfile = "bdgformat.exe", title = "Select File", filetypes = (("exe files","format*.exe"),)) #Opens File Explorer and allows user to select file.
     os.startfile(file.name) 
@@ -27,4 +26,5 @@ b3 = tk.Button(top, text = "BDG Key Safe", command=lambda: runFriend(self))
 b3.grid(row=1, column=0)
 b4 = tk.Button(top,text = "BDG Discord Manager", command=lambda: runKey(self) )
 b4.grid(row=1, column=1)
+top.title("BDG Launcher")
 top.mainloop()
